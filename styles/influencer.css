@@ -1,0 +1,151 @@
+/* shared styles */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* google font poppins */
+body{
+  font-family: "Poppins", sans-serif;
+}
+.container{
+  width: 75%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.btn-primary{
+ border-radius: 41px;
+background: rgb(224, 44, 109);
+color: rgb(255, 255, 255);
+font-size: 1rem;
+font-weight: 700;
+padding: 10px 20px;
+border: 0;
+}
+/* nav related styles */
+nav{
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+nav>ul{
+  display: flex;
+}
+nav ul li{
+  list-style: none;
+  margin-right: 30px;
+}
+nav li a{
+  text-decoration: none;
+    color: rgb(58, 58, 58);
+font-family: Poppins;
+font-size: 1rem;
+font-weight: 600;
+}
+.nav-title{
+  color: rgb(58, 58, 58);
+font-family: Poppins;
+font-size: 1.5rem;
+font-weight: 700;
+
+}
+
+/* banner styles */
+.banner{
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+.banner-content{
+  max-width: 590px;
+}
+
+.banner-title{
+color: rgb(58, 58, 58);
+font-family: Poppins;
+font-size: 3.25rem;
+font-weight: 700;
+}
+.banner-description{
+color: rgb(58, 58, 58);
+font-family: Poppins;
+font-size: 1rem;
+font-weight: 600;
+margin: 16px 0;
+}
+.banner-img{
+ background-image: url('../images/circle.svg');
+}
+/* sponsors */
+.sponsors-container{
+  margin-top: 80px;
+ display: grid;
+ grid-template-columns: repeat(7,1fr);
+  /* align-items: center; */
+}
+/* popular content */
+.popular-content .popular-title{
+ color: rgb(58, 58, 58);
+font-family: Poppins;
+font-size: 28px;
+font-weight: 600;
+text-align: center;
+margin-top: 100px;
+}
+.popular-card-container{
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+.card{
+border-radius: 5px;
+box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+background: rgb(255, 255, 255);
+padding: 20px;
+width: 340px;
+
+}
+.card .product-name{
+ color: rgb(24, 25, 31);
+font-family: Poppins;
+font-size: 2.8rem;
+font-weight: 500;
+}
+.card .product-price{
+color: rgba(0, 0, 0, 0.87);
+font-family: Inter;
+font-size: 1.5rem;
+font-weight: 400;
+margin-bottom: 8px;
+}
+.card .product-description{
+  color: rgb(120, 120, 133);
+font-family: Inter;
+font-size: .98rem;
+font-weight: 700;
+}
+
+
+
+
+/* responsive style */
+@media screen and (max-width:576px) {
+  .banner{
+    flex-direction: column-reverse;
+  }
+  nav>ul{
+    display: none;
+  }
+  .banner-content{
+    text-align: center;
+  }
+  .sponsors-container{
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    align-items: center;
+  }
+  
+}
