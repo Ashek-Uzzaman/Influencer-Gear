@@ -96,16 +96,19 @@ margin-top: 100px;
 }
 .popular-card-container{
   margin-top: 50px;
+  max-width: 1200px;
+  margin: 50px auto;
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  gap: 20px;
+  column-gap: 30px;
+  row-gap: 30px;
 }
 .card{
 border-radius: 5px;
 box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
 background: rgb(255, 255, 255);
 padding: 20px;
-width: 340px;
+width: 360px;
 
 }
 .card .product-name{
@@ -127,19 +130,88 @@ font-family: Inter;
 font-size: .98rem;
 font-weight: 700;
 }
+/* featured styles */
+.featured{
+  display: flex;
+  gap: 90px;
+  margin-top: 100px;
+}
+.featured-content{
+  width: 610px;
+  margin: 0 auto;
+}
+.featured-title{
+  color: rgb(10, 8, 38);
+font-family: Poppins;
+font-size: 2.25rem;
+font-weight: 700;
+}
+.featured-description{
+  color: rgb(108, 108, 108);
+font-family: Poppins;
+font-size: 16px;
+font-weight: 700;
+}
+.btn-join-now{
+  background: rgb(224, 44, 109);
+ color: rgb(255, 255, 255);
+font-family: Poppins;
+font-size: 16px;
+font-weight: 700;
+padding: 10px 20px;
+border: 0;
+margin-top: 16px;
+}
+/* footer */
+.footer{
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 60px;
+background: #221E52;
+padding: 50px;
+}
+.footer-title{
+ color: rgb(255, 255, 255);
+font-family: Poppins;
+font-size: 1.5rem;
+font-weight: 700;
+}
+.copyright{
+  color: rgb(217, 219, 225);
+font-family: Manrope;
+font-size: 14px;
+font-weight: 700;
+}
+.social-icon{
+  display: flex;
+  justify-content: center;
+}
+.social-icon li{
+  list-style: none;
+  margin-right: 16px;
+  color: #FFFFFF;
+  font-size: 16px;
+  border: 1px solid gray;
+ background: #493CF9;
+border-radius: 50%;
+padding: 10px;
+margin-top: 16px ;
 
-
+}
 
 
 /* responsive style */
 @media screen and (max-width:576px) {
-  .banner{
+  .banner,
+  .featured{
     flex-direction: column-reverse;
+   
   }
   nav>ul{
     display: none;
   }
-  .banner-content{
+  .banner-content,
+  .featured-content{
     text-align: center;
   }
   .sponsors-container{
@@ -147,5 +219,10 @@ font-weight: 700;
     gap: 20px;
     align-items: center;
   }
-  
+  .popular-card-container{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .footer{
+    width: 400px;
+  }
 }
